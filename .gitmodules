@@ -1,0 +1,9 @@
+[submodule "Invite-all-friends"]
+	path = Invite-all-friends
+	url = https://github.com/Elaina69/Invite-all-friends
+[submodule "Force-jungle-lane"]
+	path = Force-jungle-lane
+	url = https://github.com/Elaina69/Force-jungle-lane
+[submodule "Hide-friend-list"]
+	path = Hide-friend-list
+	url = https://github.com/Elaina69/Hide-friend-list
