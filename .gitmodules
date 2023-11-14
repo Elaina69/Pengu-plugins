@@ -7,3 +7,6 @@
 [submodule "Hide-friend-list"]
 	path = Hide-friend-list
 	url = https://github.com/Elaina69/Hide-friend-list
+[submodule "Auto-honor"]
+	path = Auto-honor
+	url = https://github.com/Elaina69/Auto-honor
