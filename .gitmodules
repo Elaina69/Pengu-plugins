@@ -10,3 +10,6 @@
 [submodule "Auto-honor"]
 	path = Auto-honor
 	url = https://github.com/Elaina69/Auto-honor
+[submodule "Bad-apple-status"]
+	path = Bad-apple-status
+	url = https://github.com/Elaina69/Bad-apple-status
