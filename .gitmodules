@@ -13,3 +13,6 @@
 [submodule "Bad-apple-status"]
 	path = Bad-apple-status
 	url = https://github.com/Elaina69/Bad-apple-status
+[submodule "auto-message"]
+	path = auto-message
+	url = https://github.com/Elaina69/auto-message
