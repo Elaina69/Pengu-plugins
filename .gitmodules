@@ -16,3 +16,6 @@
 [submodule "auto-message"]
 	path = auto-message
 	url = https://github.com/Elaina69/auto-message
+[submodule "Get-Mastery-Score"]
+	path = Get-Mastery-Score
+	url = https://github.com/Elaina69/Get-Mastery-Score
