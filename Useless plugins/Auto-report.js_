@@ -1,0 +1,101 @@
+/**
+ * @name Auto_Report
+ * @author Elaina Da Catto
+ * @description Auto report for Pengu Loader
+ * @link https://github.com/Elaina69
+ * @Nyan Meow~~~
+ */
+
+import "https://unpkg.com/elaina-theme-data@latest/data/Languages/Languages.js"
+
+function setDefaultData(defaults) {
+    Object.entries(defaults).forEach(([key, value]) => {
+        if (!DataStore.has(key)) {
+            DataStore.set(key, value);
+        }
+    });
+}
+
+async function fetchData(lcu) {
+    let data = (await fetch(lcu)).json()
+    return data
+}
+
+function addReportType(key) {
+    if (DataStore.get(key)) return key
+    else return ""
+}
+
+setDefaultData({
+    "Auto-Report"           : true,
+    "Report Comment"        : "",
+    "reportsAllies"         : false,
+    "reportsEnermies"       : false,
+    "NEGATIVE_ATTITUDE"     : true,
+    "VERBAL_ABUSE"          : false,
+    "LEAVING_AFK"           : false,
+    "ASSISTING_ENEMY_TEAM"  : false,
+    "HATE_SPEECH"           : false,
+    "THIRD_PARTY_TOOLS"     : false,
+    "INAPPROPRIATE_NAME"    : false,
+})
+
+async function autoReport() {
+    let currentSummoner = await fetchData("/lol-summoner/v1/current-summoner")
+    let endGameStat = await fetchData("/lol-end-of-game/v1/eog-stats-block")
+    let team1 = endGameStat["teams"][0]["players"]
+    let team2 = endGameStat["teams"][1]["players"]
+    let reportsList = []
+    let ReportType = []
+
+    ReportType.push(
+        addReportType("NEGATIVE_ATTITUDE"),
+        addReportType("VERBAL_ABUSE"),
+        addReportType("LEAVING_AFK"),
+        addReportType("ASSISTING_ENEMY_TEAM"),
+        addReportType("HATE_SPEECH"),
+        addReportType("THIRD_PARTY_TOOLS"),
+        addReportType("INAPPROPRIATE_NAME")
+    )
+    ReportType = ReportType.filter(item => item !== "")
+
+    if (DataStore.get("reportsAllies")) {
+        for (let i = 0; i < team1.length; i++) {
+            if (team1[i]["summonerId"] != currentSummoner["summonerId"]) {
+                reportsList.push({"summonerId": team1[i]["summonerId"], puuid: team1[i]["puuid"]})
+            }
+        }
+    }
+
+    if (DataStore.get("reportsEnermies")) {
+        for (let i = 0; i < team2.length; i++) {
+            if (team2[i]["summonerId"] != currentSummoner["summonerId"]) {
+                reportsList.push({"summonerId": team2[i]["summonerId"], puuid: team2[i]["puuid"]})
+            }
+        }
+    }
+
+    for (let i = 0; i < reportsList.length; i++) {
+        console.log(ReportType)
+        await fetch('/lol-player-report-sender/v1/end-of-game-reports', {
+            method: 'POST',
+            body: JSON.stringify({
+                "categories": ReportType,
+                "comment": DataStore("Report Comment"),
+                "gameId": endGameStat["gameId"],
+                "obfuscatedOffenderPuuid": "",
+                "offenderPuuid": reportsList[i]["puuid"],
+                "offenderSummonerId": reportsList[i]["summonerId"]
+            }),
+            headers: {'Content-Type': 'application/json'}
+        })
+    }
+}
+
+export function init(context) {
+    if (DataStore.get("Auto-Report")) {
+        context.socket.observe('/lol-gameflow/v1/gameflow-phase',async (data) => {
+            if (data["data"]=="EndOfGame") autoReport()
+        })
+    }
+}
