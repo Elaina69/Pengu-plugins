@@ -19,3 +19,21 @@
 [submodule "Get-Mastery-Score"]
 	path = Get-Mastery-Score
 	url = https://github.com/Elaina69/Get-Mastery-Score
+[submodule "auto-honor-v2"]
+	path = auto-honor-v2
+	url = https://github.com/Elaina69/auto-honor-v2/
+[submodule "Blank-Settings-Utils"]
+	path = Blank-Settings-Utils
+	url = https://github.com/Elaina69/Blank-Settings-Utils
+[submodule "eog-mass-report"]
+	path = eog-mass-report
+	url = https://github.com/Elaina69/eog-mass-report
+[submodule "fake-reward-badge"]
+	path = fake-reward-badge
+	url = https://github.com/Elaina69/fake-reward-badge
+[submodule "fake-runes-pages"]
+	path = fake-runes-pages
+	url = https://github.com/Elaina69/fake-runes-pages
+[submodule "redirect-to-crafting"]
+	path = redirect-to-crafting
+	url = https://github.com/Elaina69/redirect-to-crafting
