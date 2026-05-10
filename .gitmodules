@@ -1,3 +1,36 @@
-[submodule "Blank-Settings-Utils"]
-	path = Blank-Settings-Utils
+[submodule "_Blank-Settings-Utils"]
+	path = _Blank-Settings-Utils
 	url = https://github.com/Elaina69/Blank-Settings-Utils
+[submodule "Force-Jungle-Lane"]
+	path = Force-Jungle-Lane
+	url = https://github.com/Elaina69/Force-jungle-lane
+[submodule "Hide-Friends-List"]
+	path = Hide-Friends-List
+	url = https://github.com/Elaina69/Hide-friend-list
+[submodule "Invite-All-Friends"]
+	path = Invite-All-Friends
+	url = https://github.com/Elaina69/Invite-all-friends
+[submodule "Bad-Apple-Status"]
+	path = Bad-Apple-Status
+	url = https://github.com/Elaina69/Bad-apple-status
+[submodule "Auto-Message"]
+	path = Auto-Message
+	url = https://github.com/Elaina69/auto-message
+[submodule "TS-Auto-Honor-V2"]
+	path = TS-Auto-Honor-V2
+	url = https://github.com/Elaina69/auto-honor-v2
+[submodule "TS-EOG-Mass-Report"]
+	path = TS-EOG-Mass-Report
+	url = https://github.com/Elaina69/eog-mass-report
+[submodule "TS-Fake-Reward-Badge"]
+	path = TS-Fake-Reward-Badge
+	url = https://github.com/Elaina69/fake-reward-badge
+[submodule "TS-Fake-Runes-Pages"]
+	path = TS-Fake-Runes-Pages
+	url = https://github.com/Elaina69/fake-runes-pages
+[submodule "TS-Wallpaper-Engine-for-LoL-activityCenter"]
+	path = TS-Wallpaper-Engine-for-LoL-activityCenter
+	url = https://github.com/Elaina69/Wallpaper-Engine-for-LoL-activityCenter
+[submodule "TS-Redirect-To-Crafting"]
+	path = TS-Redirect-To-Crafting
+	url = https://github.com/Elaina69/redirect-to-crafting
