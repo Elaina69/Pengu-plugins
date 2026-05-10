@@ -1,13 +1,20 @@
 {
-    "name": "observer-template",
-    "description": "TBD",
+    "pluginName": "Old Mastery Icons",
+    "folderName": "old-mastery-icons",
+    "author": {
+        "name": "Elaina Da Catto",
+        "github": "Elaina69"
+    },
+    "description": "",
+    "config": {
+        "pluginsPath": "../../@Elaina-Plugins"
+    },
+
     "private": true,
     "version": "1.0.0",
-    "license": "WTFPL",
+    "license": "MIT",
     "type": "module",
-    "config": {
-        "penguPath": "I:\\Riot Games\\pengu-loader"
-    },
+
     "scripts": {
         "build": "tsc && vite build"
     },
