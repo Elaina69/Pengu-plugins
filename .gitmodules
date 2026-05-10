@@ -34,3 +34,6 @@
 [submodule "TS-Redirect-To-Crafting"]
 	path = TS-Redirect-To-Crafting
 	url = https://github.com/Elaina69/redirect-to-crafting
+[submodule "Get-Mastery-Score"]
+	path = Get-Mastery-Score
+	url = https://github.com/Elaina69/Get-Mastery-Score
