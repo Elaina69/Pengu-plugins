@@ -37,3 +37,6 @@
 [submodule "Get-Mastery-Score"]
 	path = Get-Mastery-Score
 	url = https://github.com/Elaina69/Get-Mastery-Score
+[submodule "TS-Old-Mastery-Icons"]
+	path = TS-Old-Mastery-Icons
+	url = https://github.com/Elaina69/Old-Mastery-Icons
